@@ -27,7 +27,7 @@ struct IntroductionVegView: View {
                             .frame(width: 100, height: 54)
                             .overlay(
                                 Circle()
-                                    .stroke(Colors.buttonColor, lineWidth: 3.5)
+                                    .stroke(Colors.button, lineWidth: 3.5)
                             )
                     }
                     .padding(.leading, 15)
@@ -90,7 +90,7 @@ struct IntroductionVegView: View {
                     .frame(width: 178, height: 78)
                     .overlay(
                         RoundedRectangle(cornerRadius: 40)
-                            .stroke(Colors.buttonColor, lineWidth: 4)
+                            .stroke(Colors.button, lineWidth: 4)
                     )
                 }
                 .padding(.trailing, 40)

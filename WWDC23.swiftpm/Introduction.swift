@@ -45,7 +45,7 @@ struct IntroductionView: View {
                             .frame(width: 178, height: 78)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 40)
-                                    .stroke(Colors.buttonColor, lineWidth: 4)
+                                    .stroke(Colors.button, lineWidth: 4)
                             )
                     }.padding(.trailing, 40)
                         .padding(.bottom, 30)
@@ -54,5 +54,6 @@ struct IntroductionView: View {
         }.background(Image("first_screen_bg")
             .resizable()
             .scaledToFill())
+        .navigationBarBackButtonHidden(true)
     }
 }
