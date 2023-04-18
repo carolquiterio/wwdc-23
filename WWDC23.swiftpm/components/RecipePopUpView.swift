@@ -60,7 +60,7 @@ struct RecipePopUpView: View {
                         }
                     )
                     .foregroundColor(Colors.backgroundTerciary)
-                    .frame(width:248, height: 384)
+                    .frame(width:148, height: 384)
                     .shadow(color: Color.black.opacity(0.05), radius: 1, x: 0, y: 4)
                 Spacer()
                 
@@ -69,7 +69,7 @@ struct RecipePopUpView: View {
                         HStack {
                             VStack(alignment: .leading) {
                                 CustomText(text:"Recipe:", textSize:30)
-                                CustomText(text:recipe, textSize:26)
+                                CustomText(text:recipe, textSize:26).frame(width: 323)
                                 Spacer()
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -79,12 +79,11 @@ struct RecipePopUpView: View {
                                 Image(recipeImage).resizable().scaledToFit().frame(width: 187).cornerRadius(3)
                             }.padding(.all, 20)
 
-                            Spacer()
                         }
                     )
                     .foregroundColor(Colors.backgroundTerciary)
                     .shadow(color: Color.black.opacity(0.05), radius: 1, x: 0, y: 4)
-                    .frame(width:477, height: 384)
+                    .frame(width:604, height: 384)
                 Spacer()
                 
             }

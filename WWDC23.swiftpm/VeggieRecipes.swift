@@ -77,9 +77,9 @@ struct VeggieRecipesView<Destination: View>: View {
                             color = Colors.bananaTerciary
                             name = "Banana"
                             recipe = "1. Mix 1 egg, 1 mashed banana, ground cinnamon, 1 tablespoon oat flour, and honey together, and then put the mixture in a frying pan greased with coconut oil. \n 2. Cut 1 banana and put it in the pancake"
-                            vitamins = ["Vitamins", "Vitamins", "Vitamins"]
+                            vitamins = ["A", "C", "B1, B2, B6, B9"]
                             image = "veg_banana"
-                            recipeImage = "banana_recipe"
+                            recipeImage = "recipe_banana"
                             onXClick = {isPopUpVisible = false}
                         }
                         .disabled(isBananaDisabled)
@@ -100,10 +100,10 @@ struct VeggieRecipesView<Destination: View>: View {
                             isPopUpVisible = true
                             color = Colors.lettuceTerciary
                             name = "Lettuce"
-                            recipe = "1. Cook the eggs. \n. Wash the lettuce and put it on a plate. \n3. Place the cheese, eggs, season. \n4. Put the seasoned soybeans on top and the sauce."
-                            vitamins = ["Vitamins", "Vitamins", "Vitamins"]
+                            recipe = "1. Separate the olives, lettuce, cherry tomatoes, and kale. \n2. Wash and dry the tomatoes and leaves of lettuce and Chinese kale.\n3. Assemble the salad and season it."
+                            vitamins = ["A", "C", "Calcium"]
                             image = "veg_lettuce"
-                            recipeImage = "veg_lettuce"
+                            recipeImage = "recipe_lettuce"
                             onXClick = {isPopUpVisible = false}
                         }
                         .disabled(isLettuceDisabled)
@@ -120,12 +120,12 @@ struct VeggieRecipesView<Destination: View>: View {
                             DisabledCircle(isDisabled: isCarrotDisabled)
                         }.onTapGesture {
                             isPopUpVisible = true
-                            color = Colors.bananaTerciary
-                            name = "Banana"
-                            recipe = "Banana"
-                            vitamins = ["Vitamins", "Vitamins", "Vitamins"]
-                            image = "veg_banana"
-                            recipeImage = "veg_banana"
+                            color = Colors.carrotTerciary
+                            name = "Carrot"
+                            recipe = "1. Wash, peel and cut the carrots into sticks.\n2. Season with a drizzle of olive oil, a pinch of paprika and oregano.\nMix well.\n3. Preheat the Air Fryer for 5 minutes at 200°C, and then place the carrots for 15 minutes at 200°C."
+                            vitamins = ["A", "C", "K"]
+                            image = "veg_carrot"
+                            recipeImage = "recipe_carrot"
                             onXClick = {isPopUpVisible = false}
                         }
                         .disabled(isCarrotDisabled)
@@ -148,12 +148,12 @@ struct VeggieRecipesView<Destination: View>: View {
                             DisabledCircle(isDisabled: isTomatoDisabled)
                         }.onTapGesture {
                             isPopUpVisible = true
-                            color = Colors.bananaTerciary
-                            name = "Banana"
-                            recipe = "Banana"
-                            vitamins = ["Vitamins", "Vitamins", "Vitamins"]
-                            image = "veg_banana"
-                            recipeImage = "veg_banana"
+                            color = Colors.tomatoTerciary
+                            name = "Tomato"
+                            recipe = "1. Separate tomato, onion, oregano, salt and butter.\n2. Put all of them in a pan and cook uncovered over very low heat. 3. Stir occasionally with a wooden spoon, crushing the large tomato pieces and remove after 30 minutes."
+                            vitamins = ["A", "C", "K"]
+                            image = "veg_tomato"
+                            recipeImage = "recipe_tomato"
                             onXClick = {isPopUpVisible = false}
                         }
                         .disabled(isBananaDisabled)
@@ -170,12 +170,12 @@ struct VeggieRecipesView<Destination: View>: View {
                             DisabledCircle(isDisabled: isEggplantDisabled)
                         }.onTapGesture {
                             isPopUpVisible = true
-                            color = Colors.bananaTerciary
-                            name = "Banana"
-                            recipe = "Banana"
-                            vitamins = ["Vitamins", "Vitamins", "Vitamins"]
-                            image = "veg_banana"
-                            recipeImage = "veg_banana"
+                            color = Colors.eggplantTerciary
+                            name = "Eggplant"
+                            recipe = "1. Wash the eggplants.\nCut the eggplants lengthwise.\n2. Mix well the honey, olive oil, salt, cumin, and turmeric with the eggplant.\n3. Place in a preheated oven and bake for 30-40 minutes."
+                            vitamins = ["B", "C", "K", "A"]
+                            image = "veg_eggplant"
+                            recipeImage = "recipe_eggplant"
                             onXClick = {isPopUpVisible = false}
                         }
                         .disabled(isEggplantDisabled)
@@ -192,12 +192,12 @@ struct VeggieRecipesView<Destination: View>: View {
                             DisabledCircle(isDisabled: isBroccoliDisabled)
                         }.onTapGesture {
                             isPopUpVisible = true
-                            color = Colors.bananaTerciary
-                            name = "Banana"
-                            recipe = "Banana"
-                            vitamins = ["Vitamins", "Vitamins", "Vitamins"]
-                            image = "veg_banana"
-                            recipeImage = "veg_banana"
+                            color = Colors.broccoliTerciary
+                            name = "Broccoli"
+                            recipe = "1. Place the broccoli in a food processor and blend it.\n2. Finely chop the onion.\n3. Mix cheese, egg, salt, onion and broccoli.\n4. Place the mixture in a frying pan with a little olive oil and fry on both sides."
+                            vitamins = ["C", "E", "A"]
+                            image = "veg_broccoli"
+                            recipeImage = "recipe_broccoli"
                             onXClick = {isPopUpVisible = false}
                         }
                         .disabled(isBroccoliDisabled)

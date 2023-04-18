@@ -33,7 +33,7 @@ struct ConclusionView: View {
                     .padding(.top, 35)
                     Spacer()
                 }
-                CustomText(text: "Carol now understands that vegetables and greens can be delicious when cooked in recipes with foods she already enjoys. She has discovered the opportunity to improve her health and experiment with new ingredients and dishes.", textSize: 34)
+                CustomText(text: "Carol now understands that vegetables and greens can be delicious when cooked in recipes with foods she already enjoys. She has discovered the opportunity to improve her health and experiment new ingredients and dishes.", textSize: 34)
                     .padding(.top, 40)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading).multilineTextAlignment(.center)
                 Spacer()

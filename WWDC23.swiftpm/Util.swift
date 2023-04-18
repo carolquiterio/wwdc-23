@@ -24,10 +24,10 @@ struct Colors {
     static let tomatoSccondary = Color(red: 236/255, green: 96/255, blue:85/255, opacity: 0.2)
     
     static let lettuceTerciary = Color(red: 214/255, green: 235/255, blue:204/255)
-    static let eggplantTerciary = Color(red: 94/255, green: 180/255, blue:201/255)
+    static let eggplantTerciary = Color(red: 194/255, green: 180/255, blue:201/255)
     static let bananaTerciary = Color(red: 248/255, green: 236/255, blue:194/255)
-    static let carrotTerciary = Color(red: 242/255, green: 12/255, blue:184/255)
+    static let carrotTerciary = Color(red: 242/255, green: 212/255, blue:184/255)
     static let broccoliTerciary = Color(red: 189/255, green: 203/255, blue:176/255)
-    static let tomatoTerciary = Color(red: 248/255, green: 193/255, blue:199/255)
+    static let tomatoTerciary = Color(red: 248/255, green: 203/255, blue:199/255)
     
 }
