@@ -5,8 +5,7 @@ struct IntroductionView: View {
         HStack {
             Spacer()
             VStack {
-                
-                CustomText(text: "Hi!", textSize: 34)
+            CustomText(text: "Hi!", textSize: 34)
                     .frame(width: 41)
                     .position(x: 330, y: 96)
                 
@@ -50,5 +49,6 @@ struct IntroductionView: View {
             .scaledToFill())
             .navigationBarBackButtonHidden(true)
             .edgesIgnoringSafeArea(.all)
+            .navigationBarHidden(true)
     }
 }

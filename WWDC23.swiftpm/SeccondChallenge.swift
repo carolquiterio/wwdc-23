@@ -18,6 +18,7 @@ struct SeccondChallengeView: View {
         ZStack {
             ZStack {
                 VStack(alignment: .center) {
+                    Spacer().frame(height: 20)
                     HStack {
                         VStack {
                             Button {
@@ -35,8 +36,7 @@ struct SeccondChallengeView: View {
                                     )
                             }
                             .padding(.leading, 15)
-                            .padding(.top, 80)
-                            Spacer()
+                            .padding(.top, 40)
                         }
                         Spacer()
                         
@@ -46,6 +46,7 @@ struct SeccondChallengeView: View {
                             .foregroundColor(.black)
                         Spacer()
                         TimerView(notifyTimeReached: $timeReached)
+                            .padding(.top, 40)
                         Spacer()
                     }.frame(maxWidth: .infinity)
                     
@@ -89,7 +90,7 @@ struct SeccondChallengeView: View {
                         CustomButton(text : "3", textSize : 60, action : {isErrorPopUpVisible = true})
                         CustomButton(text : "7", textSize : 60, action : {isErrorPopUpVisible = true})
                     }
-                    
+                    Spacer().frame(height: 20)
                 }
                 Rectangle()
                     .fill(Color.black.opacity((isErrorPopUpVisible || isSuccessPopUpVisible || timeReached) ? 0.4 : 0))
@@ -133,5 +134,7 @@ struct SeccondChallengeView: View {
             .navigationBarBackButtonHidden(true)
             .background(Colors.background)
             .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.all)
+            .navigationBarHidden(true)
     }
 }

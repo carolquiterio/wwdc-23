@@ -49,10 +49,10 @@ struct VeggieRecipesView<Destination: View>: View {
                                     )
                             }
                             .padding(.leading, 15)
-                            .padding(.top, 80)
+                            .padding(.top, 40)
                             Spacer()
                         }
-                        Spacer()
+                        Spacer().frame(width:10)
                         CustomText(text: text, textSize: 34)
                             .padding(.top, 40)
                             .frame(maxWidth: 900, maxHeight: .infinity, alignment: .topLeading)
@@ -248,8 +248,9 @@ struct VeggieRecipesView<Destination: View>: View {
             )
         }.frame(maxWidth: .infinity)
             .navigationBarBackButtonHidden(true)
-            .background(Colors.background)
+            .background(Colors.background.ignoresSafeArea(edges: .all))
             .edgesIgnoringSafeArea(.all)
+            .navigationBarHidden(true)
     }
 }
 

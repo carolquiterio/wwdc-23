@@ -91,7 +91,7 @@ struct RecipePopUpView: View {
             
             
         }.padding(30)
-            .background(color)
+            .background(color.ignoresSafeArea(edges: .bottom))
             .cornerRadius(10)
             .frame(width: 868, height: 582)
     }

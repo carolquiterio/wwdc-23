@@ -18,6 +18,7 @@ struct ThirdChallengeView: View {
         ZStack {
             ZStack {
                 VStack(alignment: .center) {
+                    Spacer().frame(height: 20)
                     HStack {
                         VStack {
                             Button {
@@ -35,8 +36,7 @@ struct ThirdChallengeView: View {
                                     )
                             }
                             .padding(.leading, 15)
-                            .padding(.top, 80)
-                            Spacer()
+                            .padding(.top, 40)
                         }
                         Spacer()
                         
@@ -46,6 +46,7 @@ struct ThirdChallengeView: View {
                             .foregroundColor(.black)
                         Spacer()
                         TimerView(notifyTimeReached: $timeReached)
+                            .padding(.top, 40)
                         Spacer()
                     }.frame(maxWidth: .infinity)
                     
@@ -82,7 +83,6 @@ struct ThirdChallengeView: View {
                         CustomText(text: "?", textSize : 80, color: Colors.textSeccondary, padding: 60)
                             .alignmentGuide(.leading, computeValue: { _ in 0 })
                     }
-                    
                     HStack {
                         
                         CustomButton(text: "20", textSize : 60, action : {isSuccessPopUpVisible = true})
@@ -90,8 +90,7 @@ struct ThirdChallengeView: View {
                         CustomButton(text : "15", textSize : 60, action : {isErrorPopUpVisible = true})
                         CustomButton(text : "4", textSize : 60, action : {isErrorPopUpVisible = true})
                     }
-                    
-                    
+                    Spacer().frame(height: 20)
                 }
                 Rectangle()
                     .fill(Color.black.opacity((isErrorPopUpVisible || isSuccessPopUpVisible || timeReached) ? 0.4 : 0))
@@ -134,5 +133,6 @@ struct ThirdChallengeView: View {
             .navigationBarBackButtonHidden(true)
             .background(Colors.background)
             .edgesIgnoringSafeArea(.all)
+            .navigationBarHidden(true)
     }
 }

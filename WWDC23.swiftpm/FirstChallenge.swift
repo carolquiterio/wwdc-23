@@ -18,6 +18,7 @@ struct FirstChallengeView: View {
             ZStack {
                 ZStack {
                     VStack(alignment: .center) {
+                        Spacer().frame(height: 20)
                         HStack {
                             VStack {
                                 Button {
@@ -35,17 +36,16 @@ struct FirstChallengeView: View {
                                         )
                                 }
                                 .padding(.leading, 15)
-                                .padding(.top, 80)
+                                .padding(.top, 40)
                             }
                             Spacer()
                             
                             CustomText(text: "Solve the math challenge by finding out how much the tomato is worth.", textSize: 34)
-                                .padding(.top, 60)
+                                .padding(.top, 40)
                                 .frame(maxWidth: 900, maxHeight: .infinity, alignment: .topLeading)
                                 .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
                             Spacer()
-                            
                             TimerView(notifyTimeReached: $timeReached)
                                 .padding(.top, 40)
                             Spacer()
@@ -86,6 +86,7 @@ struct FirstChallengeView: View {
                             CustomButton(text : "15", textSize : 60, action : {isErrorPopUpVisible = true})
                             CustomButton(text : "20", textSize : 60, action : {isSuccessPopUpVisible = true})
                         }
+                        Spacer().frame(height: 20)
                     }
                     Rectangle()
                             .fill(Color.black.opacity((isErrorPopUpVisible || isSuccessPopUpVisible || timeReached) ? 0.4 : 0))
@@ -129,6 +130,6 @@ struct FirstChallengeView: View {
         .navigationBarBackButtonHidden(true)
         .background(Colors.background)
         .edgesIgnoringSafeArea(.all)
-        .ignoresSafeArea(.all)
+        .navigationBarHidden(true)
     }
 }

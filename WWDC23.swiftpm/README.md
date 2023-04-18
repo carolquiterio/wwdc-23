@@ -9,11 +9,11 @@ decided to become a vegetarian, and them I had to learn how to eat these food. T
 of different plates and vegetables, and this made me start likeing them. Now, veggies are one of the best part of my 
 plates and I love them.
 
-This app was made to represent how fun and delicious eating vegetables, fruits and greens can be. I think all people
-should have the opportunity to really try vegetables mixed with delicious food.
+Because of this, I decided to make a playground App to show how fun and delicious eating vegetables, fruits and greens can be. 
+I think all people should have the opportunity to really try vegetables mixed with delicious food.
 
 ## Licence References
-- The fruits, vegetables, greens arrow icon, and chrck icon were designed by me using Figma.
+- The fruits, vegetables, greens arrow icon, and check icon were designed by me using Figma.
 - All recipes were taken from .
 - The return and play icon were taken from SF Symbols, from Apple.
 - The background pallete was taken from

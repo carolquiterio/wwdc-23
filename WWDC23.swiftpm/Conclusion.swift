@@ -92,6 +92,7 @@ struct ConclusionView: View {
             .scaledToFill())
         .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
     }
 }
 
