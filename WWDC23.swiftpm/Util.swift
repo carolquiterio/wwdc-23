@@ -12,6 +12,7 @@ struct Colors {
     static let background = Color(red: 255/255, green: 242/255, blue: 225/255)
     
     static let button = Color(red: 228/255, green: 134/255, blue: 109/255)
+    static let textSeccondary = Color(red: 219/255, green: 33/255, blue: 66/255)
     
     static let backgroundSeccondary = Color(red: 255/255, green: 248/255, blue: 239/255)
     static let backgroundTerciary = Color(red: 246/255, green: 243/255, blue: 228/255)
@@ -25,9 +26,9 @@ struct Colors {
     
     static let lettuceTerciary = Color(red: 214/255, green: 235/255, blue:204/255)
     static let eggplantTerciary = Color(red: 194/255, green: 180/255, blue:201/255)
-    static let bananaTerciary = Color(red: 248/255, green: 236/255, blue:194/255)
+    static let bananaTerciary = Color(red: 235/255, green: 224/255, blue:184/255)
     static let carrotTerciary = Color(red: 242/255, green: 212/255, blue:184/255)
     static let broccoliTerciary = Color(red: 189/255, green: 203/255, blue:176/255)
-    static let tomatoTerciary = Color(red: 248/255, green: 203/255, blue:199/255)
+    static let tomatoTerciary = Color(red: 218/255, green: 183/255, blue:181/255)
     
 }

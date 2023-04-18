@@ -15,6 +15,7 @@ struct VeggieRecipesView<Destination: View>: View {
     let isCarrotDisabled: Bool
     let isBananaDisabled: Bool
     let isBroccoliDisabled: Bool
+    let text: String
     let destinationView: Destination
     
     @State var color: Color = Colors.background
@@ -26,7 +27,7 @@ struct VeggieRecipesView<Destination: View>: View {
     @State var onXClick: () -> Void = {}
     @State var isPopUpVisible = false
     
-    @Environment(\.dismiss) private var dismiss    
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         ZStack {
             ZStack {
@@ -48,15 +49,14 @@ struct VeggieRecipesView<Destination: View>: View {
                                     )
                             }
                             .padding(.leading, 15)
-                            .padding(.top, 35)
+                            .padding(.top, 80)
                             Spacer()
                         }
                         Spacer()
-                        CustomText(text: "Congratulations! You helped Carol gather new food. Now, click on them so you can check their vitamins and recipes too.", textSize: 34)
+                        CustomText(text: text, textSize: 34)
                             .padding(.top, 40)
                             .frame(maxWidth: 900, maxHeight: .infinity, alignment: .topLeading)
                             .foregroundColor(.black)
-                            .multilineTextAlignment(.center)
                         Spacer()
                     }
                     Spacer()
@@ -76,7 +76,7 @@ struct VeggieRecipesView<Destination: View>: View {
                             isPopUpVisible = true
                             color = Colors.bananaTerciary
                             name = "Banana"
-                            recipe = "1. Mix 1 egg, 1 mashed banana, ground cinnamon, 1 tablespoon oat flour, and honey together, and then put the mixture in a frying pan greased with coconut oil. \n 2. Cut 1 banana and put it in the pancake"
+                            recipe = "1. Mix 1 egg, 1 mashed banana, ground cinnamon, 1 tablespoon oat flour, and honey together.\n2. Put the mixture in a frying pan greased with coconut oil. \n3. Cut 1 banana and put it in the pancake"
                             vitamins = ["A", "C", "B1, B2, B6, B9"]
                             image = "veg_banana"
                             recipeImage = "recipe_banana"
@@ -94,14 +94,14 @@ struct VeggieRecipesView<Destination: View>: View {
                                 .scaledToFit()
                                 .padding(20)
                                 .frame(width: 190)
-
+                            
                             DisabledCircle(isDisabled: isLettuceDisabled)
                         }.onTapGesture {
                             isPopUpVisible = true
                             color = Colors.lettuceTerciary
                             name = "Lettuce"
                             recipe = "1. Separate the olives, lettuce, cherry tomatoes, and kale. \n2. Wash and dry the tomatoes and leaves of lettuce and Chinese kale.\n3. Assemble the salad and season it."
-                            vitamins = ["A", "C", "Calcium"]
+                            vitamins = ["A", "C"]
                             image = "veg_lettuce"
                             recipeImage = "recipe_lettuce"
                             onXClick = {isPopUpVisible = false}
@@ -122,7 +122,7 @@ struct VeggieRecipesView<Destination: View>: View {
                             isPopUpVisible = true
                             color = Colors.carrotTerciary
                             name = "Carrot"
-                            recipe = "1. Wash, peel and cut the carrots into sticks.\n2. Season with a drizzle of olive oil, a pinch of paprika and oregano.\nMix well.\n3. Preheat the Air Fryer for 5 minutes at 200°C, and then place the carrots for 15 minutes at 200°C."
+                            recipe = "1. Wash, peel and cut the carrots into sticks.\n2. Season with olive oil, paprika and oregano and mix well.\n3. Preheat for 5 minutes, and then place the carrots for 15 minutes."
                             vitamins = ["A", "C", "K"]
                             image = "veg_carrot"
                             recipeImage = "recipe_carrot"
@@ -150,7 +150,7 @@ struct VeggieRecipesView<Destination: View>: View {
                             isPopUpVisible = true
                             color = Colors.tomatoTerciary
                             name = "Tomato"
-                            recipe = "1. Separate tomato, onion, oregano, salt and butter.\n2. Put all of them in a pan and cook uncovered over very low heat. 3. Stir occasionally with a wooden spoon, crushing the large tomato pieces and remove after 30 minutes."
+                            recipe = "1. Separate tomato, onion, oregano, salt and butter.\n2. Put all of them and cook over very low heat. \n3. Stir occasionally, crush the large tomato pieces and remove after 30 minutes."
                             vitamins = ["A", "C", "K"]
                             image = "veg_tomato"
                             recipeImage = "recipe_tomato"
@@ -230,8 +230,9 @@ struct VeggieRecipesView<Destination: View>: View {
                 }
                 Rectangle()
                     .fill(Color.black.opacity(isPopUpVisible ? 0.4 : 0))
-                    .animation(.easeInOut(duration: 0.3))
                     .edgesIgnoringSafeArea(.all)
+                    .animation(.easeInOut(duration: 0.3), value: isPopUpVisible)
+
             }.overlay(
                 RecipePopUpView(
                     color: color,
@@ -243,12 +244,12 @@ struct VeggieRecipesView<Destination: View>: View {
                     onXClick: onXClick
                 )
                 .opacity(isPopUpVisible ? 1 : 0)
-                .animation(.easeInOut(duration: 0.3))
+                .animation(.easeInOut(duration: 0.3), value: isPopUpVisible)
             )
         }.frame(maxWidth: .infinity)
             .navigationBarBackButtonHidden(true)
             .background(Colors.background)
-        
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -257,7 +258,7 @@ struct DisabledCircle: View {
     var body: some View {
         Circle()
             .fill(Color.black.opacity(isDisabled ? 0.4 : 0))
-            .animation(.easeInOut(duration: 0.3))
+            .animation(.easeInOut(duration: 0.3), value: isDisabled)
             .edgesIgnoringSafeArea(.all)
             .frame(width:224, height:224)
     }

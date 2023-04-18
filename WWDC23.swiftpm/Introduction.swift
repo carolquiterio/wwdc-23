@@ -49,5 +49,6 @@ struct IntroductionView: View {
             .resizable()
             .scaledToFill())
             .navigationBarBackButtonHidden(true)
+            .edgesIgnoringSafeArea(.all)
     }
 }

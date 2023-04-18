@@ -8,19 +8,19 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "WWDC23",
+    name: "VeggieMathics",
     platforms: [
         .iOS("15.2")
     ],
     products: [
         .iOSApplication(
-            name: "WWDC23",
+            name: "VeggieMathics",
             targets: ["AppModule"],
             bundleIdentifier: "com.carolquiterio.WWDC23",
             teamIdentifier: "Q42NF3HR3Y",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .lightningBolt),
+            appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.orange),
             supportedDeviceFamilies: [
                 .pad,

@@ -30,7 +30,7 @@ struct ChallengeProposalView: View {
                                 )
                         }
                         .padding(.leading, 15)
-                        .padding(.top, 35)
+                        .padding(.top, 80)
                         Spacer()
                     }
                     CustomText(text: "Now, Carol needs help to incorporate the recommended vegetables, greens and fruits into her daily routine. Fortunately, they're been sold near here in exchange for 3 math results.\nCan you help Carol solve the math challenges to pick up the  vitamins and nutrients?", textSize: 34)
@@ -74,6 +74,7 @@ struct ChallengeProposalView: View {
             .resizable()
             .scaledToFill())
         .navigationBarBackButtonHidden(true)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

@@ -11,6 +11,8 @@ import SwiftUI
 struct ConclusionView: View {
     @Environment(\.dismiss) private var dismiss
     
+    @State private var isRotating = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -30,7 +32,7 @@ struct ConclusionView: View {
                             )
                     }
                     .padding(.leading, 15)
-                    .padding(.top, 35)
+                    .padding(.top, 80)
                     Spacer()
                 }
                 CustomText(text: "Carol now understands that vegetables and greens can be delicious when cooked in recipes with foods she already enjoys. She has discovered the opportunity to improve her health and experiment new ingredients and dishes.", textSize: 34)
@@ -43,38 +45,43 @@ struct ConclusionView: View {
                 Image("carol_normal_mood_with_veggies")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 348, height: 560)
+                    .frame(width: 328, height: 540)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .overlay(
                 ZStack {
                     HStack {
                         Spacer()
-                        NavigationLink {
-                            IntroductionView()
-                        } label: {
-                            HStack {
-                                CustomText(text: "Start Again", textSize: 30)
-                                    .frame(width: 140)
-                                    .foregroundColor(.black)
-                                    .padding(10)
-                                Image(systemName: "arrow.clockwise")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundColor(.black)
-                                    .font(Font.title.weight(.bold))
-                                Spacer()
+                        Button (action: {
+                            isRotating.toggle()
+                        }) {
+                            NavigationLink {
+                                IntroductionView()
+                            } label: {
+                                HStack {
+                                    CustomText(text: "Start Again", textSize: 30)
+                                        .frame(width: 140)
+                                        .foregroundColor(.black)
+                                        .padding(10)
+                                    Image(systemName: "arrow.clockwise")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.black)
+                                        .font(Font.title.weight(.bold))
+                                        .rotationEffect(isRotating ? .degrees(360) : .degrees(0))
+                                    Spacer()
+                                }
+                                .padding()
+                                .frame(width: 240, height: 78)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 40)
+                                        .stroke(Colors.button, lineWidth: 4)
+                                )
                             }
-                            .padding()
-                            .frame(width: 240, height: 78)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 40)
-                                    .stroke(Colors.button, lineWidth: 4)
-                            )
+                            .padding(.trailing, 40)
+                            .padding(.bottom, 30)
                         }
-                        .padding(.trailing, 40)
-                        .padding(.bottom, 30)
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
                 }
@@ -84,6 +91,7 @@ struct ConclusionView: View {
             .resizable()
             .scaledToFill())
         .navigationBarBackButtonHidden(true)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

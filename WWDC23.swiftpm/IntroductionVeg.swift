@@ -30,7 +30,7 @@ struct IntroductionVegView: View {
                             )
                     }
                         .padding(.leading, 15)
-                        .padding(.top, 35)
+                        .padding(.top, 80)
                     Spacer()
                 }
                 CustomText(text: "One day, during a routine check-up, Carol learned that her unhealthy diet was lacking essential vitamins and nutrients. To solve this, her doctor prescribed a new diet with a focus on increasing her veggies intake.", textSize: 34)
@@ -97,5 +97,6 @@ struct IntroductionVegView: View {
             .resizable()
             .scaledToFill())
             .navigationBarBackButtonHidden(true)
+            .edgesIgnoringSafeArea(.all)
     }
 }
