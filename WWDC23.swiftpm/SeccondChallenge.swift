@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct SeccondChallenge: View {
+struct SeccondChallengeView: View {
     @Environment(\.dismiss) private var dismiss
     @State var isSuccessPopUpVisible = false
     @State var isErrorPopUpVisible = false
@@ -39,8 +39,7 @@ struct SeccondChallenge: View {
                             }
                             Spacer()
                             
-                            Text("Solve the math challenge by finding out how much the eggplant is worth.")
-                                .font(.custom("Patrick Hand SC", size: 34))
+                            CustomText(text: "Solve the math challenge by finding out how much the eggplant is worth.", textSize: 34)
                                 .padding(.top, 40)
                                 .frame(maxWidth: 900, maxHeight: .infinity, alignment: .topLeading)
                                 .foregroundColor(.black)
@@ -53,40 +52,40 @@ struct SeccondChallenge: View {
                                 .scaledToFit()
                             CustomText(text: "+", textSize : 80, padding: 60)
                                 .foregroundColor(.black)
-                            Image("veg_tomato")
+                            Image("veg_lettuce")
                                 .resizable()
                                 .scaledToFit()
                             
                             CustomText(text: "=", textSize : 80, padding: 60)
-                            CustomText(text: "30", textSize : 80, padding: 60)
+                            CustomText(text: "10", textSize : 80, padding: 60)
                         }
                         HStack {
-                            Image("veg_banana")
+                            Image("veg_lettuce")
                                 .resizable()
                                 .scaledToFit()
                             CustomText(text: "-", textSize : 80, padding: 60)
-                            Image("veg_tomato")
+                            Image("veg_lettuce")
                                 .resizable()
                                 .scaledToFit()
                             CustomText(text: "=", textSize : 80, padding: 60)
                             CustomText(text: "10", textSize : 80, padding: 60)
                         }
                         HStack(alignment: .center) {
-                            Image("veg_tomato")
+                            Spacer().frame(width: 260)
+                            Image("veg_eggplant")
                                 .resizable()
                                 .scaledToFit()
                             CustomText(text: "=", textSize : 80, padding: 60)
                             CustomText(text: "?", textSize : 80, padding: 60)
                                 .alignmentGuide(.leading, computeValue: { _ in 0 })
-                            
                         }
                         
                         HStack {
                             
                             CustomButton(text: "1", textSize : 60, action : {isErrorPopUpVisible = true})
-                            CustomButton(text : "10", textSize : 60, action : {isErrorPopUpVisible = true})
-                            CustomButton(text : "15", textSize : 60, action : {isErrorPopUpVisible = true})
-                            CustomButton(text : "20", textSize : 60, action : {isSuccessPopUpVisible = true})
+                            CustomButton(text : "5", textSize : 60, action : {isSuccessPopUpVisible = true})
+                            CustomButton(text : "3", textSize : 60, action : {isErrorPopUpVisible = true})
+                            CustomButton(text : "7", textSize : 60, action : {isErrorPopUpVisible = true})
                         }
                         
 
@@ -95,16 +94,24 @@ struct SeccondChallenge: View {
                             .fill(Color.black.opacity((isErrorPopUpVisible || isSuccessPopUpVisible) ? 0.4 : 0))
                             .animation(.easeInOut(duration: 0.3))
                             .edgesIgnoringSafeArea(.all)
-                }.overlay{
+                }.overlay(
                     ErrorPopUpView(action: {isErrorPopUpVisible = false})
                         .opacity((isErrorPopUpVisible) ? 1 : 0)
                         .animation(.easeInOut(duration: 0.3))
-                    
-                    SuccessPopUpView(destinationView: VeggieRecipes())
-                        .opacity((isSuccessPopUpVisible) ? 1 : 0)
-                        .animation(.easeInOut(duration: 0.3))
-                }
-            
+                    )
+                    .overlay(
+                        SuccessPopUpView(destinationView: VeggieRecipesView(
+                            isLettuceDisabled: false,
+                            isEggplantDisabled: false,
+                            isTomatoDisabled: false,
+                            isCarrotDisabled: true,
+                            isBananaDisabled: false,
+                            isBroccoliDisabled: true,
+                            destinationView: ThirdChallengeView()
+                        ))
+                            .opacity((isSuccessPopUpVisible) ? 1 : 0)
+                            .animation(.easeInOut(duration: 0.3))
+                    )
             }.frame(maxWidth: .infinity)
         .navigationBarBackButtonHidden(true)
         .background(Colors.background)

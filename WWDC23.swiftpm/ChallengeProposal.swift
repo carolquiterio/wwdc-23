@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ChallengeProposal: View {
+struct ChallengeProposalView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -33,8 +33,7 @@ struct ChallengeProposal: View {
                         .padding(.top, 35)
                         Spacer()
                     }
-                    Text("Now, Carol needs help to incorporate the recommended vegetables, greens and fruits into her daily routine. Fortunately, they're been sold near here in exchange for math results.\nCan you help Carol solve the math challenges to pick up the  vitamins and nutrients?")
-                        .font(.custom("Patrick Hand SC", size: 34))
+                    CustomText(text: "Now, Carol needs help to incorporate the recommended vegetables, greens and fruits into her daily routine. Fortunately, they're been sold near here in exchange for 3 math results.\nCan you help Carol solve the math challenges to pick up the  vitamins and nutrients?", textSize: 34)
                         .padding(.top, 40)
                         .frame(width: 900, height: 345, alignment: .topLeading)
                     Spacer()
@@ -46,12 +45,11 @@ struct ChallengeProposal: View {
                             .scaledToFit()
                             .frame(width: 200, height: 438)
                         NavigationLink {
-                            FirstChallenge()
+                            FirstChallengeView()
                         } label: {
                             HStack {
-                                Text("I accept the challenge!")
+                                CustomText(text: "I accept the challenge!", textSize: 30)
                                     .frame(width: 290)
-                                    .font(.custom("Patrick Hand SC", size: 30))
                                     .foregroundColor(.black)
                                 Image(systemName: "play.fill")
                                     .resizable()

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Conclusion: View {
+struct ConclusionView: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -33,8 +33,7 @@ struct Conclusion: View {
                     .padding(.top, 35)
                     Spacer()
                 }
-                Text("Carol now understands that vegetables and greens can be delicious when cooked in recipes with foods she already enjoys. She has discovered the opportunity to improve her health and experiment with new ingredients and dishes.")
-                    .font(.custom("Patrick Hand SC", size: 34))
+                CustomText(text: "Carol now understands that vegetables and greens can be delicious when cooked in recipes with foods she already enjoys. She has discovered the opportunity to improve her health and experiment with new ingredients and dishes.", textSize: 34)
                     .padding(.top, 40)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading).multilineTextAlignment(.center)
                 Spacer()
@@ -44,7 +43,7 @@ struct Conclusion: View {
                 Image("carol_normal_mood_with_veggies")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 700)
+                    .frame(width: 348, height: 560)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .overlay(
@@ -55,9 +54,8 @@ struct Conclusion: View {
                             IntroductionView()
                         } label: {
                             HStack {
-                                Text("Start Again")
+                                CustomText(text: "Start Again", textSize: 30)
                                     .frame(width: 140)
-                                    .font(.custom("Patrick Hand SC", size: 30))
                                     .foregroundColor(.black)
                                     .padding(10)
                                 Image(systemName: "arrow.clockwise")
