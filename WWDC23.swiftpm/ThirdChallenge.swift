@@ -117,12 +117,12 @@ struct ThirdChallengeView: View {
             )
             .overlay(
                 TimerPopUpView(destinationView: VeggieRecipesView(
-                    isLettuceDisabled: true,
-                    isEggplantDisabled: true,
+                    isLettuceDisabled: false,
+                    isEggplantDisabled: false,
                     isTomatoDisabled: false,
-                    isCarrotDisabled: true,
+                    isCarrotDisabled: false,
                     isBananaDisabled: false,
-                    isBroccoliDisabled: true,
+                    isBroccoliDisabled: false,
                     text: "Click in the food so you can check their vitamins and recipes.",
                     destinationView: ConclusionView()
                 ))

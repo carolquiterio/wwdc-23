@@ -118,8 +118,8 @@ struct SeccondChallengeView: View {
                     
             .overlay(
                 TimerPopUpView(destinationView: VeggieRecipesView(
-                    isLettuceDisabled: true,
-                    isEggplantDisabled: true,
+                    isLettuceDisabled: false,
+                    isEggplantDisabled: false,
                     isTomatoDisabled: false,
                     isCarrotDisabled: true,
                     isBananaDisabled: false,
