@@ -1,22 +1,44 @@
 #  VeggieMathics
 
-## Hello! My name is Carolina Quiterio and I'm an Apple Developer Academy student passionate about technology and iOS development in Brazil.
+<h3 align="center">
+    <img alt="Logo" title="#logo" width="300px" src=".github/readme-background.png">
+    <br><br>
+    <b>VeggieMathics</b>  
+    <br>
+</h3>
+
+## 👋 Hello! My name is Carolina Quiterio and I'm an Apple Developer Academy student passionate about technology and iOS development in Brazil.
+
+# Index
+- [About me](#about-me)
+- [Technology](#technology)
+- [How to run](#how-to-run)
+- [Licence Reference](#license-reference)
 
 
-## About me
+<a id="about-me"></a>
+## 👩🏼‍💻 About me
 During my childhood, I hated veggies, and it was very hard for me to try them, and I even had deficiencies in some vitamins in my body. It turns out that when I was 15 years old, I decided to become a vegetarian, so I had to learn how to eat vegetables. This decision made me experiment different plates and vegetables, and I began to like them. Now, veggies are one of the best parts of my meals, and I love them.
 
 Because of this, I decided to combine three things that I love: 1. Veggies; 2. Technology; and 3. Mathematics. 
 I then created VeggieMathics, a Playground App written in Swift that tells the story of Carol, a girl who needs help to collect vitamins and recipes of some veggies by solving math challenges. I made this Playground to help children, like myself, have the opportunity to truly experience the benefits of incorporating vegetables into their diet in a delicious way for a healthier lifestyle.
 
 
-##Technology
-To make VeggieMathics I used Swift, SwiftUI and XCode.
+<a id="technology"></a>
+## 🔥 Technology
+To make VeggieMathics I used Swift, SwiftUI and XCode 14.0.
 
-## How to run
+
+
+
+
+<a id="how-to-run"></a>
+## 🤔 How to run
 - The app was designed to run on Apple iPad Air (5th generation) 10:9pol, on the XCode Simulator ou phisic device.
 
-## Licence References
+
+<a id="license-reference"></a>
+## 📝 Licence References
 - The fruits, vegetables and greens images and arrow and check icons were designed by me using Figma.
 - The return and play icon were taken from SF Symbols, from Apple.
 - The girl image was generated using the Cute Cartoon Character Generator (https://www.figma.com/community/file/1177999849331686918) and then modified by me.
