@@ -24,6 +24,7 @@ struct VeggieRecipesView<Destination: View>: View {
     @State var vitamins: [String] = [""]
     @State var image: String = ""
     @State var recipeImage: String = ""
+    @State var recipeTitle: String = ""
     @State var onXClick: () -> Void = {}
     @State var isPopUpVisible = false
     
@@ -77,6 +78,7 @@ struct VeggieRecipesView<Destination: View>: View {
                             color = Colors.bananaTerciary
                             name = "Banana"
                             recipe = "1. Mix 1 egg, 1 mashed banana, ground cinnamon, 1 tablespoon oat flour, and honey together.\n2. Put the mixture in a frying pan greased with coconut oil. \n3. Cut 1 banana and put it in the pancake"
+                            recipeTitle = "Recipe: Banana Pancake"
                             vitamins = ["A", "C", "B1, B2, B6, B9"]
                             image = "veg_banana"
                             recipeImage = "recipe_banana"
@@ -101,6 +103,7 @@ struct VeggieRecipesView<Destination: View>: View {
                             color = Colors.lettuceTerciary
                             name = "Lettuce"
                             recipe = "1. Separate the olives, lettuce, cherry tomatoes, and kale. \n2. Wash and dry the tomatoes and leaves of lettuce and Chinese kale.\n3. Assemble the salad and season it."
+                            recipeTitle = "Recipe: Lettuce Salad"
                             vitamins = ["A", "C"]
                             image = "veg_lettuce"
                             recipeImage = "recipe_lettuce"
@@ -123,6 +126,7 @@ struct VeggieRecipesView<Destination: View>: View {
                             color = Colors.carrotTerciary
                             name = "Carrot"
                             recipe = "1. Wash, peel and cut the carrots into sticks.\n2. Season with olive oil, paprika and oregano and mix well.\n3. Preheat for 5 minutes, and then place the carrots for 15 minutes."
+                            recipeTitle = "Recipe: Carrot Sticks"
                             vitamins = ["A", "C", "K"]
                             image = "veg_carrot"
                             recipeImage = "recipe_carrot"
@@ -151,6 +155,7 @@ struct VeggieRecipesView<Destination: View>: View {
                             color = Colors.tomatoTerciary
                             name = "Tomato"
                             recipe = "1. Separate tomato, onion, oregano, salt and butter.\n2. Put all of them and cook over very low heat. \n3. Stir occasionally, crush the large tomato pieces and remove after 30 minutes."
+                            recipeTitle = "Recipe: Tomato Sauce"
                             vitamins = ["A", "C", "K"]
                             image = "veg_tomato"
                             recipeImage = "recipe_tomato"
@@ -173,6 +178,7 @@ struct VeggieRecipesView<Destination: View>: View {
                             color = Colors.eggplantTerciary
                             name = "Eggplant"
                             recipe = "1. Wash the eggplants.\nCut the eggplants lengthwise.\n2. Mix well the honey, olive oil, salt, cumin, and turmeric with the eggplant.\n3. Place in a preheated oven and bake for 30-40 minutes."
+                            recipeTitle = "Recipe: Roasted Eggplant"
                             vitamins = ["B", "C", "K", "A"]
                             image = "veg_eggplant"
                             recipeImage = "recipe_eggplant"
@@ -195,6 +201,7 @@ struct VeggieRecipesView<Destination: View>: View {
                             color = Colors.broccoliTerciary
                             name = "Broccoli"
                             recipe = "1. Place the broccoli in a food processor and blend it.\n2. Finely chop the onion.\n3. Mix cheese, egg, salt, onion and broccoli.\n4. Place the mixture in a frying pan with a little olive oil and fry on both sides."
+                            recipeTitle = "Recipe: Broccoli Burger"
                             vitamins = ["C", "E", "A"]
                             image = "veg_broccoli"
                             recipeImage = "recipe_broccoli"
@@ -241,6 +248,7 @@ struct VeggieRecipesView<Destination: View>: View {
                     vitamins: vitamins,
                     image: image,
                     recipeImage: recipeImage,
+                    recipeTitle: recipeTitle,
                     onXClick: onXClick
                 )
                 .opacity(isPopUpVisible ? 1 : 0)

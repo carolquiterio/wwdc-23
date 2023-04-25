@@ -15,6 +15,7 @@ struct RecipePopUpView: View {
     var vitamins: [String]
     var image: String
     var recipeImage: String
+    var recipeTitle: String
     var onXClick: () -> Void
     
     var body: some View {
@@ -68,7 +69,7 @@ struct RecipePopUpView: View {
                     .overlay(
                         HStack {
                             VStack(alignment: .leading) {
-                                CustomText(text:"Recipe:", textSize:30)
+                                CustomText(text:recipeTitle, textSize:30)
                                 CustomText(text:recipe, textSize:26)
                                 Spacer()
                             }

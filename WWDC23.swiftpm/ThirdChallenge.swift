@@ -126,7 +126,7 @@ struct ThirdChallengeView: View {
                     text: "Click in the food so you can check their vitamins and recipes.",
                     destinationView: ConclusionView()
                 ))
-                .opacity((timeReached) ? 1 : 0)
+                .opacity((timeReached && !isSuccessPopUpVisible) ? 1 : 0)
                 .animation(.easeInOut(duration: 0.3), value: timeReached)
             )
         }.frame(maxWidth: .infinity)
