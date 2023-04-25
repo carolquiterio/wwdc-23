@@ -1,7 +1,7 @@
 #  VeggieMathics
 
 <h3 align="center">
-    <img alt="Logo" title="#logo" width="300px" src=".github/readme-background.png">
+    <img alt="Logo" title="#logo" width="1000px" src="github/readme-background.png">
     <br>
 </h3>
 
@@ -32,11 +32,11 @@ To make VeggieMathics I used Swift, SwiftUI and XCode 14.0.
 ## 📱 Design
 The design was made using [Figma](https://www.figma.com/).
 <h1 align="center">
-    <img alt="Introduction" src="github/introduction-screen" width="300px">
-    <img alt="Challenge Proposal" src="github/proposal-screen" width="300px"> 
+    <img alt="Introduction" src="github/introduction-screen.png" width="300px">
+    <img alt="Challenge Proposal" src="github/proposal-screen.png" width="300px"> 
     <br>
-    <img alt="Challenge" src="github/challenge-screen" width="300px">
-    <img alt="Recipes" src="github/recipe-screen" width="300px">
+    <img alt="Challenge" src="github/challenge-screen.png" width="300px">
+    <img alt="Recipes" src="github/recipe-screen.png" width="300px">
 </h1>
 
 <a id="how-to-run"></a>
