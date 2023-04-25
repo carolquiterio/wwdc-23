@@ -5,11 +5,12 @@
     <br>
 </h3>
 
-## 👋 Hello! My name is Carolina Quiterio and I'm an Apple Developer Academy student passionate about technology and iOS development in Brazil.
+ 👋 Hello! My name is Carolina Quiterio and I'm an Apple Developer Academy student passionate about technology and iOS development in Brazil.
 
-# Index
+## Index
 - [About me](#about-me)
 - [Technology](#technology)
+- [Design](#design)
 - [How to run](#how-to-run)
 - [Licence Reference](#license-reference)
 
@@ -22,15 +23,25 @@ Because of this, I decided to combine three things that I love: 1. Veggies; 2. T
 I then created VeggieMathics, a Playground App written in Swift that tells the story of Carol, a girl who needs help to collect vitamins and recipes of some veggies by solving math challenges. I made this Playground to help children, like myself, have the opportunity to truly experience the benefits of incorporating vegetables into their diet in a delicious way for a healthier lifestyle.
 
 
+
 <a id="technology"></a>
 ## 🔥 Technology
 To make VeggieMathics I used Swift, SwiftUI and XCode 14.0.
 
+<a id="design"></a>
+## 📱 Design
+The design was made using [Figma](https://www.figma.com/).
+<h1 align="center">
+    <img alt="Introduction" src="github/introduction-screen" width="300px">
+    <img alt="Challenge Proposal" src="github/proposal-screen" width="300px"> 
+    <br>
+    <img alt="Challenge" src="github/challenge-screen" width="300px">
+    <img alt="Recipes" src="github/recipe-screen" width="300px">
+</h1>
 
 <a id="how-to-run"></a>
 ## 🤔 How to run
 - The app was designed to run on Apple iPad Air (5th generation) 10:9pol, on the XCode Simulator ou phisic device.
-
 
 <a id="license-reference"></a>
 ## 📝 Licence References
